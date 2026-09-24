@@ -1,9 +1,17 @@
-const { Person } = require("./person"); // Importa a classe/módulo Person
+const dotenv = require('dotenv')
 
-require("./modules/http");
+dotenv.config() 
 
-const person = new Person("Piter"); // Criando Novo objeto usando o Módulo
+const connectToDatabase = require('./modules/connect.js')
 
+connectToDatabase()
+
+
+
+//const person = new Person("Piter"); // Criando Novo objeto usando o Módulo
+//const { Person } = require("./person"); // Importa a classe/módulo Person
+//require("./modules/express.js");
+//require("./modules/http");
 // console.log(person.sayMyName());
 // require("./modules/path"); // Executa o módulo imediatamente
 // require("./modules/fs");

@@ -1,7 +1,8 @@
 const http = require("http");
 const port = 8080;
 // Esse req é o objeto da requisição e o res é a resposta do servidor
-const server = http.createServer((req, res) => {
+const server = http.createServer((req, res) => { 
+    // Tipo da requisição -> GET 
   if (req.url === "/home") {
     // Envia o status 200 (Sucesso) e avisa o navegador que o conteúdo enviado será uma página HTML
     res.writeHead(200, { "Content-type": "text/html" });
